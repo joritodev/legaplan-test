@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+
+  --checked-button: #a0dcf6;
+  --border-button: #0796d3;
+
+  --add-button: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
+  --delete-button: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
+  --cancel-button: #e7eefb;
+
+  --text-primary: #000000;
+  --text-secondary: #757575;
+}
+
+body {
+  margin: 5px 24px 0 24px;
+  padding: 0;
+
+  font-family: "Inter Tight", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .addButton {
+    width: 272px;
+    height: 51px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: var(--add-button);
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--primary-color);
+  }
+}

@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 272px;
+  height: 90px;
+
+  border: none 1px hsla(220, 29%, 88%, 1);
+  border-bottom-style: solid;
+  
+  .welcome {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+
+    margin: 0;
+  }
+  .date {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .date::first-letter {
+    text-transform: capitalize;
+  }
+}
