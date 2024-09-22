@@ -67,7 +67,7 @@ export function ToDo() {
         <>
           <div id="blur"></div>
           <div className="modal" id="modal">
-            <h1>Nova tarefa</h1>
+            <h1 style={{color: "#000000", font: "Inter Tight"}}>Nova tarefa</h1>
             <div className="body">
               <label>Título</label>
               <input

@@ -39,7 +39,7 @@ export function Task({id, checked, title, onDelete}: TaskProps) {
         <>
           <div id="blur"></div>
           <div className="modal" id="modal-delete">
-            <h1 style={{color: "#000000"}}>Deletar tarefa</h1>
+            <h1 style={{color: "#000000", font: "Inter Tight"}}>Deletar tarefa</h1>
             <div className="body-delete">
               <p className="p-delete">
                 Tem certeza que você deseja deletar essa tarefa?
