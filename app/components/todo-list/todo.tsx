@@ -9,6 +9,7 @@ export function ToDo() {
   const [modal, setModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
   const [titles, setTitles] = useState("");
+  const [valorInput, setValorInput] = useState('');
 
   const toggleModal = () => {
     setModal(!modal);
@@ -18,10 +19,12 @@ export function ToDo() {
   };
   function handleSubmit() {
     handleAddTask(titles);
-    if(titles){
+    setTitles('')
+    if (titles) {
       setModal(false);
     }
   }
+
   return (
     <>
       <main>
@@ -67,13 +70,14 @@ export function ToDo() {
         <>
           <div id="blur"></div>
           <div className="modal" id="modal">
-            <h1 style={{color: "#000000"}}>Nova tarefa</h1>
+            <h1 style={{ color: "#000000" }}>Nova tarefa</h1>
             <div className="body">
               <label>Título</label>
               <input
                 type="text"
                 placeholder="Digite"
                 onChange={(e) => setTitles(e.target.value)}
+                id="title"
               />
               <div className="buttons">
                 <button className="add" onClick={handleSubmit}>
@@ -91,7 +95,6 @@ export function ToDo() {
           </div>
         </>
       )}
-      
     </>
   );
 }
