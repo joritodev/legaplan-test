@@ -49,9 +49,27 @@ label {
     text-decoration: line-through;
   }
 
+  #title.checked {
+    text-decoration: line-through;
+  }
+
   button {
     background-color: white;
     border: none;
   }
 }
 
+.p-delete {
+  padding: 0 0 20px 0;
+}
+
+@media (min-width: 800px) {
+  section {
+    width: 386px;
+    
+    label {
+      width: 274px;
+      text-align: left;
+    }
+  }
+}

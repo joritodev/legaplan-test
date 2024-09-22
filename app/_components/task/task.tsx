@@ -13,10 +13,17 @@ interface TaskProps {
 }
 
 export function Task({id, checked, title, onDelete}: TaskProps) {
+  const [deleteModal, setDeleteModal] = useState(false);
+
   function deleteTask() {
-    onDelete(id) 
+    onDelete(id);
   }
-  const {handleTaksChecked} = useTasks()
+
+  const toggleDeleteModal = () => {
+    setDeleteModal(!deleteModal);
+  };
+  
+  const {handleTaksChecked} = useTasks();
 
   function handleMark () {
     handleTaksChecked(id)
@@ -24,10 +31,35 @@ export function Task({id, checked, title, onDelete}: TaskProps) {
   return (
     <section>
       <input type="checkbox" id="check-task" onChange={handleMark} checked={checked}/>
-      <label htmlFor="check-task">{title}</label>
-      <button onClick={deleteTask}>
+      <label htmlFor="check-task" id="title" className={`${checked ? "checked" : ""}`}>{title}</label>
+      <button onClick={toggleDeleteModal}>
         <Image src="trash.svg" alt="Trash" width={24} height={24} priority />
       </button>
+      {deleteModal && (
+        <>
+          <div id="blur"></div>
+          <div className="modal" id="modal-delete">
+            <h1 style={{color: "#000000"}}>Deletar tarefa</h1>
+            <div className="body-delete">
+              <p className="p-delete">
+                Tem certeza que você deseja deletar essa tarefa?
+              </p>
+              <div className="buttons">
+                <button className="delete" onClick={deleteTask}>
+                  Deletar
+                </button>
+                <button
+                  id="close-modal"
+                  className="cancel"
+                  onClick={toggleDeleteModal}
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </> 
+      )}
     </section>
   );
 }

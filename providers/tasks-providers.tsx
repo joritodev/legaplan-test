@@ -42,6 +42,7 @@ export function TasksProvider({ children }: { children: ReactNode }) {
       checked: false,
     };
     setTasks([...tasks, tasksObject]);
+    document.querySelector("#title")
   }
 
   function onDelete(id: string) {

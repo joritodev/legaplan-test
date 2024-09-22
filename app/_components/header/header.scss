@@ -7,7 +7,7 @@ header {
 
   border: none 1px hsla(220, 29%, 88%, 1);
   border-bottom-style: solid;
-  
+
   .welcome {
     font-size: 16px;
     font-weight: 500;
@@ -27,5 +27,25 @@ header {
   }
   .date::first-letter {
     text-transform: capitalize;
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .welcome {
+      width: 284px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      text-align: center;
+    }
+    .date {
+      margin: 0;
+    }
   }
 }
