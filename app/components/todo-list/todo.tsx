@@ -9,7 +9,6 @@ export function ToDo() {
   const [modal, setModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
   const [titles, setTitles] = useState("");
-  const [valorInput, setValorInput] = useState('');
 
   const toggleModal = () => {
     setModal(!modal);
