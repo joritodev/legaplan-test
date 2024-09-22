@@ -22,9 +22,6 @@ export function ToDo() {
       setModal(false);
     }
   }
-  function handleDelete() {
-    return onDelete
-  }
   return (
     <>
       <main>
