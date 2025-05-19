@@ -7,14 +7,10 @@ import { useState } from "react";
 export function ToDo() {
   const { deletedTasks, onDelete, tasks, handleAddTask } = useTasks();
   const [modal, setModal] = useState(false);
-  const [deleteModal, setDeleteModal] = useState(false);
   const [titles, setTitles] = useState("");
 
   const toggleModal = () => {
     setModal(!modal);
-  };
-  const toggleDeleteModal = () => {
-    setDeleteModal(!deleteModal);
   };
   function handleSubmit() {
     handleAddTask(titles);

@@ -47,6 +47,7 @@ main {
   letter-spacing: -0.02em;
   text-align: left;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .modal {
@@ -124,10 +125,12 @@ main {
         letter-spacing: -0.02em;
         text-align: left;
         color: var(--primary-color);
+        cursor: pointer;
       }
 
       .delete {
         background: var(--delete-button);
+        cursor: pointer;
       }
 
       .cancel {
@@ -147,6 +150,7 @@ main {
         letter-spacing: -0.02em;
         text-align: left;
         color: #000000;
+        cursor: pointer;
       }
     }
   }
