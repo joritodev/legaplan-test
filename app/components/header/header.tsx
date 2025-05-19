@@ -14,7 +14,7 @@ export function Header() {
         height={36}
         priority
       />
-      <p className="welcome">Bem vindo de volta, João</p>
+      <p className="welcome">Bem vindo de volta, João Victor</p>
       <p className="date">{dateFormatter(date)}</p>
     </header>
   );
