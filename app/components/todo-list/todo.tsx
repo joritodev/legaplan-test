@@ -53,7 +53,7 @@ export function ToDo() {
               <Task
                 title={task.title}
                 checked={task.checked}
-                onDelete={toggleDeleteModal}
+                onDelete={onDelete}
                 key={task.id}
                 id={task.id}
               />
